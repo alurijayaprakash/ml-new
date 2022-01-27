@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Expert Mode</title>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        Linear Regression Expert Mode - Multi
+        <br>
+        
+    </h1>
+    <h4 style="text-align: center;">
+        <b>You have selected</b> :
+    </h4>
+    <h5 style="text-align: center;">
+        Fit_Intercept_Val : {{Fit_Intercept_Val}}
+        <br>
+        copy_X_Val : {{copy_X_Val}}
+        <br>
+        n_jobs_Val : {{n_jobs_Val}}
+        <br>
+        positive_Val : {{positive_Val}}
+    </h5>
+    <h1 class="text-center">
+        Expert - Multi variable Mode ==>
+        <!-- Output is : {{output}} -->
+        <h5 class="text-center">
+            <br>
+            Mean Absolute Error: {{Mean_Absolute_Error}}
+            <br>
+            Mean Squared Error: {{Mean_Squared_Error}}
+            <br>
+            Root Mean Squared Error: {{Root_Mean_Squared_Error}}
+            <br>
+            R<sup>2</sup> score : {{score}}
+        </h5>
+
+    </h1>
+    <div class="text-center">
+        <!-- <img src={{imgpath_html}} alt="Expert Uni variable Output" width="600" height="400" > -->
+    <br>
+    <br>
+    <a class="btn btn-primary" href="{{url_for('lr_final_expert_multi_input')}}" role="button">Predict</a>
+    <br>
+    <br>
+    <a class="btn btn-primary" href="/" role="button">Home</a>
+
+    
+    </div>
+</body>
+</html>
