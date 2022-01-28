@@ -11,7 +11,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import string
 import random
-import s3fs
+
 
 
 def lr_model_alog(mydata, file_ext):
