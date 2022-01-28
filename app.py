@@ -16,7 +16,6 @@ app.config['UPLOAD_PATH'] = 'uploads'
 app.secret_key = "abc"
 
 
-
 # Index Page -----------------------------------------------------------------------------------
 
 @app.route('/')
@@ -298,5 +297,6 @@ def lg_final_multi_input():
 
 # App Run -----------------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=8080)
 ## For deploying the app use `app.run(debug=False, host="0.0.0.0", port=80)`

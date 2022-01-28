@@ -5,13 +5,13 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from mpl_toolkits.mplot3d import Axes3D
+# from mpl_toolkits.mplot3d import Axes3D
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import string
 import random
-
+import s3fs
 
 
 def lr_model_alog(mydata, file_ext):
@@ -72,13 +72,18 @@ def lr_model_alog(mydata, file_ext):
     
     fig1 = plt.gcf()
     plt.draw()
+    
 
 
     ranimg = ''.join(random.choices(string.ascii_lowercase + string.digits, k = 6))
-    imgpath = 'static\\linear_uni_expert_pic' + ranimg + ".png"
-    imgpath_html = 'static\linear_uni_expert_pic' + ranimg + ".png"
+    # FOR AWS
+    imgpath = "static//" + ranimg + ".png"
+    imgpath_html = ranimg + ".png"
+    # FOR AWS
 
     fig1.savefig(imgpath, dpi=100)
+
+    
     # plt.show()
     print("lr model return")
 

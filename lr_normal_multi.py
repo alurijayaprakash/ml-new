@@ -91,9 +91,14 @@ def lr_normal_multi(mydata, file_ext):
 
 
     ranimg = ''.join(random.choices(string.ascii_lowercase + string.digits, k = 6))
-    imgpath = 'static\\linear_uni_expert_pic' + ranimg + ".png"
-    imgpath_html = 'static\linear_uni_expert_pic' + ranimg + ".png"
+    #imgpath = 'static\\linear_uni_expert_pic' + ranimg + ".png"
+    #imgpath_html = 'static\linear_uni_expert_pic' + ranimg + ".png"
 
+    # FOR AWS
+    imgpath = "static//" + ranimg + ".png"
+    imgpath_html = ranimg + ".png"
+    # FOR AWS
+    
     fig1.savefig(imgpath, dpi=100)
     # plt.show()
     print("lr model return")

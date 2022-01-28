@@ -76,9 +76,14 @@ def lg_model_normal(mydata, file_ext):
 
     fig1 = plt.gcf()
     ranimg = ''.join(random.choices(string.ascii_lowercase + string.digits, k = 6))
-    imgpath = 'static\\logistic_uni_normal_pic' + ranimg + ".png"
-    imgpath_html = 'static\logistic_uni_normal_pic' + ranimg + ".png"
+    # imgpath = 'static\\logistic_uni_normal_pic' + ranimg + ".png"
+    # imgpath_html = 'static\logistic_uni_normal_pic' + ranimg + ".png"
 
+    # FOR AWS
+    imgpath = "static//" + ranimg + ".png"
+    imgpath_html = ranimg + ".png"
+    # FOR AWS
+    
     fig1.savefig(imgpath, dpi=100)
     # plt.show()
     print("lg model return")

@@ -75,8 +75,14 @@ def lr_model_expert(mydata, file_ext, Fit_Intercept_Val, copy_X_Val, n_jobs_Val,
     
 
     ranimg = ''.join(random.choices(string.ascii_lowercase + string.digits, k = 6))
-    imgpath = 'static\\linear_uni_expert_pic' + ranimg + ".png"
-    imgpath_html = 'static\linear_uni_expert_pic' + ranimg + ".png"
+    # imgpath = 'static\\linear_uni_expert_pic' + ranimg + ".png"
+    # imgpath_html = 'static\linear_uni_expert_pic' + ranimg + ".png"
+    
+    # FOR AWS
+    imgpath = "static//" + ranimg + ".png"
+    imgpath_html = ranimg + ".png"
+    # FOR AWS
+    
     fig1.savefig(imgpath, dpi=100)
     # plt.show()
     print("lr model return")
